@@ -10,14 +10,26 @@ public class HomeController {
 
 
     // Have to make methods for controller now
-    //@Responsebody if returnign a string on page/ do not need @Reponsebody if not returning a string(returning a template)
+    //@Responsebody if returning a string on page/ do not need @ReponseBody if not returning a string(returning a template)
 
 
     // @GGetMapping for get request to display data on page ("/) -the tag
-    @GetMapping("/")
+   /* @GetMapping("/")
     @ResponseBody
     public String returnWelcomePage(){
         return "welcome to santa's homepage";
+    }*/
+
+    @GetMapping("/")
+    @ResponseBody
+    public String returnWelcomePageHtml(){
+        // created getmapping method returning HTML 1. <h3> :welcome header
+        return "<h3>Welcome to Santa's Workshop</h3>" +
+                // used <p> </p> html tag for sentence "meet your elf"
+                // base tags <p> <a href = > </a> </p>
+                // wrapped the link HTNL tag <a href= /elves - route once user clicks on link> </a>
+                "<p> Meet your <a href='/elves'>elf</a> !</p>"
+                ;
     }
 
 }
