@@ -21,15 +21,16 @@ public class HomeController {
     }*/
 
     @GetMapping("/")
-    @ResponseBody
+    //@ResponseBody
     public String returnWelcomePageHtml(){
+        return "welcome";
         // created getmapping method returning HTML 1. <h3> :welcome header
-        return "<h3>Welcome to Santa's Workshop</h3>" +
-                // used <p> </p> html tag for sentence "meet your elf"
-                // base tags <p> <a href = > </a> </p>
-                // wrapped the link HTNL tag <a href= /elves - route once user clicks on link> </a>
-                "<p> Meet your <a href='/elves'>elf</a> !</p>"
-                ;
+//        return "<h3>Welcome to Santa's Workshop</h3>" +
+//                // used <p> </p> html tag for sentence "meet your elf"
+//                // base tags <p> <a href = > </a> </p>
+//                // wrapped the link HTNL tag <a href= /elves - route once user clicks on link> </a>
+//                "<p> Meet your <a href='/elves'>elf</a> !</p>"
+//                ;
     }
 
 //    @GetMapping("/elves")
