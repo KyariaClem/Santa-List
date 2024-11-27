@@ -32,4 +32,9 @@ public class HomeController {
                 ;
     }
 
+//    @GetMapping("/elves")
+//    @ResponseBody
+//    public String elvesHomepage() {
+//        return "ELVES !!";
+//    }
 }
