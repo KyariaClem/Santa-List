@@ -2,6 +2,7 @@ package com.faithone.santa_list.controllers;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -22,7 +23,9 @@ public class HomeController {
 
     @GetMapping("/")
     //@ResponseBody
-    public String returnWelcomePageHtml(){
+    public String returnWelcomePageHtml(Model model){
+        //Added in model interace to add use model.addAttribute. First ""- name ii gave th:text =${} , second ""- value i want template to display
+        model.addAttribute("headingText", "Welcome to Santas Workshop !");
         return "welcome";
         // created getmapping method returning HTML 1. <h3> :welcome header
 //        return "<h3>Welcome to Santa's Workshop</h3>" +
