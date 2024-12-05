@@ -3,7 +3,7 @@ package com.faithone.santa_list.models;
 import java.util.Objects;
 
 public class elf {
-    // set up field for eld model
+    // set up field for elf model
 
     private static int nextId = 1;
     private final int id;
@@ -20,6 +20,8 @@ public class elf {
         this.personality = personality;
         nextId++;
     }
+
+
 
     public int getId() {
         return id;
