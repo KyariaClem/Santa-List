@@ -25,7 +25,7 @@ public class HomeController {
     //@ResponseBody
     public String returnWelcomePageHtml(Model model){
         //Added in model interace to add use model.addAttribute. First ""- name ii gave th:text =${} , second ""- value i want template to display
-        model.addAttribute("headingText", "Welcome to Santas Workshop !");
+        model.addAttribute("headingText", "Welcome to Santas' Workshop !");
         return "welcome";
         // created getmapping method returning HTML 1. <h3> :welcome header
 //        return "<h3>Welcome to Santa's Workshop</h3>" +
